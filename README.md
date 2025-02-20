@@ -33,7 +33,7 @@ Welcome to the *Task Manager & Growth Mindset Challenge* – a powerful and intu
 
 ### 1️⃣ Clone the Repository
 bash
-$ git clone https://github.com/AreeshaRepo/Growth-mindset-app.git
+$ git clone https://github.com/AreeshaRepo/Growth-Mindset-Challenge2.git
 $ cd your-repository
 
 
