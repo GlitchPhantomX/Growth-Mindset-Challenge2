@@ -1,2 +1,6 @@
-openpyxl
 streamlit
+google-generativeai
+python-dotenv
+pandas
+speechrecognition
+textblob
