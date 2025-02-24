@@ -15,11 +15,8 @@ st.set_page_config(
     layout="centered",
     initial_sidebar_state="expanded"
 )
-
 genai.configure(api_key="AIzaSyBhypGHX8U-B52fUJ4fJiy3q6mvVHOdZPc")
-
 model = genai.GenerativeModel("gemini-pro")
-
 def chat_with_gemini(prompt):
     """Generates a response from the Gemini AI model."""
     try:
@@ -33,7 +30,6 @@ def chat_with_gemini(prompt):
 
 response = chat_with_gemini("Hello, Gemini!")
 print(response)
-
 def get_motivation():
     motivations = [
         "Believe you can and you're halfway there. - Theodore Roosevelt",
@@ -43,19 +39,14 @@ def get_motivation():
         "The only way to do great work is to love what you do. - Steve Jobs"
     ]
     return random.choice(motivations)
-
-
 def habit_tracker_app():
     st.title("📊 Habit Tracker")
     st.write("Track your daily habits and build a better routine! 🚀")
-
     if 'habits' not in st.session_state:
         st.session_state.habits = []
-
     habit = st.text_input("📝 Add a new habit:")
     frequency = st.selectbox("🔄 Frequency", ["Daily", "Weekly", "Monthly"])
     goal = st.number_input("🎯 Goal (e.g., times per week)", min_value=1, value=1)
-
     if st.button("Add Habit"):
         if habit:
             st.session_state.habits.append({
@@ -67,7 +58,6 @@ def habit_tracker_app():
             st.success("Habit added successfully! 🎉")
         else:
             st.warning("Please enter a habit!")
-
     if st.session_state.habits:
         st.subheader("📋 Your Habits:")
         for i, habit in enumerate(st.session_state.habits, 1):
